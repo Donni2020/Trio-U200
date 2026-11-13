@@ -11,6 +11,8 @@ extension OpenAPS {
         static let basalProfile = "settings/basal_profile.json"
         static let carbRatios = "settings/carb_ratios.json"
         static let tempTargets = "settings/temptargets.json"
+        /// Saved copies of basal rates, ISF and carb ratios (Profiles screen).
+        static let profileSnapshots = "settings/profile_snapshots.json"
     }
 
     enum Monitor {
@@ -26,6 +28,12 @@ extension OpenAPS {
         static let cob = "monitor/cob.json"
         static let cgmState = "monitor/cgm-state.json"
         static let podAge = "monitor/pod-age.json"
+        static let extendedBolus = "monitor/extended_bolus.json"
+        static let extendedBolusPortions = "monitor/extended_bolus_portions.json"
+        static let extendedCarbPlans = "monitor/extended_carb_plans.json"
+        static let rescueCarbs = "monitor/rescue_carbs.json"
+        static let aiReport = "monitor/ai_report.json"
+        static let aiReports = "monitor/ai_reports.json"
         static let trio_custom_oref_variables = "monitor/trio_custom_oref_variables.json"
         static let alertHistory = "monitor/alerthistory.json"
         static let statistics = "monitor/statistics.json"

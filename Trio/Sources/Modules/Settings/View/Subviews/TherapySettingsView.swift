@@ -27,12 +27,29 @@ struct TherapySettingsView: BaseView {
             .listRowBackground(Color.chart)
 
             Section(
+                header: Text("Insulin Concentration"),
+                content: {
+                    Text("Insulin Concentration").navigationLink(to: .insulinConcentration, from: self)
+                }
+            )
+            .listRowBackground(Color.chart)
+
+            Section(
                 header: Text("Basic Insulin Rates & Targets"),
                 content: {
                     Text("Glucose Targets").navigationLink(to: .targetsEditor, from: self)
                     Text("Basal Rates").navigationLink(to: .basalProfileEditor, from: self)
                     Text("Carb Ratios").navigationLink(to: .crEditor, from: self)
                     Text("Insulin Sensitivities").navigationLink(to: .isfEditor, from: self)
+                }
+            )
+            .listRowBackground(Color.chart)
+
+            Section(
+                header: Text("Profiles"),
+                footer: Text("Save basal rates, ISF and carb ratios before changing them, to go back if needed."),
+                content: {
+                    Text("Saved Profiles").navigationLink(to: .profileSnapshots, from: self)
                 }
             )
             .listRowBackground(Color.chart)
